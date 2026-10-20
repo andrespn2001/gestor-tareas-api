@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Gestor de Tareas PRO (con API)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>ANDRES LUCAS</h1>
+        <p>Mi gestor de tareas con filtros, persistencia y APIs.</p>
+        <div class="counter" id="counter">0 tareas pendientes</div>
+    </header>
+
+    <main>
+        <section class="add-task">
+            <div class="input-row">
+                <input type="text" id="taskInput" placeholder="Escribe una tarea...">
+                <button id="addButton">Añadir</button>
+            </div>
+            <button id="loadExampleBtn" class="btn-secondary">☁️ Cargar ejemplos de la API</button>
+        </section>
+
+        <!-- Indicador de carga -->
+        <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+            <span class="spinner"></span> Cargando desde el servidor...
+        </div>
+
+        <section class="filters">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="pending">Pendientes</button>
+            <button class="filter-btn" data-filter="completed">Completadas</button>
+        </section>
+
+        <section class="task-list">
+            <ul id="taskList"></ul>
+        </section>
+
+        <div class="actions">
+            <button class="clear-btn" id="clearCompleted">Limpiar completadas 🧹</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Creado con ayuda de IA 🤖</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
